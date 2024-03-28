@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Rectangle</title>
+    <style>
+        body{
+          background-color: #00DBDE;
+          background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+          min-height: 100vh; 
+         }
+      
+         .title{
+           text-align: center;
+           margin-top:50px;
+           color: whitesmoke;
+         }
+      
+         .container{
+          background-color: #D9AFD9;
+          background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+          width: 400px;
+          margin: 40px auto;
+          border-radius: 20px;
+          padding:20px 10px
+         }
+      
+         .input_box{
+          display: block;
+          font-size: 25px;
+          margin: 20px auto;
+          padding:5px 5px;
+      
+      
+         }
+      
+         .button{
+          width:100px;
+          background-color: black;
+          color: white;
+          font-size: 20px;
+          padding: 5px;
+          margin: 20px auto;
+          border-radius: 5px;
+          border: none;
+          cursor: pointer;
+        }
+         
+         .btn{
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           margin: 0 15% ;
+      
+         }
+      
+         .area{
+           text-align: center;
+           color: black;
+           font-size: 25px;
+         }
+      
+        @media screen and (max-width: 768px) {
+          .container{
+            width:90%;
+          }
+         }
+          
+      
+         @media screen and (max-width: 350px) {
+          .input_box{
+            width:170px;
+            font-size: 20px;
+            margin: 10px auto;
+            padding:5px 5px;
+      
+          }
+         }
+          
+         
+      
+      
+      </style>
+      
+      </head>
+      <body>
+          <h1 class="title">Area of Rectangle</h1>
+        <div class="container">
+          <input type="text" placeholder="Enter Length" class="input_box" id="length"/>
+          <input type="text" placeholder="Enter Breadth" class="input_box" id="breadth"/>
+          <p class="area" id="area1">Area:</p>
+         <div class="btn">
+          <button type="button" class="button" onclick="calcArea()">Calculate</button>
+          <button type="button" class="button" onclick="resetValue()">Reset</button>
+         </div> 
+        </div>  
+      
+        <script>
+          function calcArea(){
+           const input1 = document.getElementById("length");
+           const input2 = document.getElementById("breadth");
+           const area = input1.value * input2.value;
+           const areaOfRec = document.getElementById("area1"); 
+           areaOfRec.innerHTML = (`Area: ${area} m<sup>2</sup>`); 
+           
+          }
+      
+          function resetValue(){
+           const input1 = document.getElementById("length");
+           const input2 = document.getElementById("breadth");   
+           const areaOfRec = document.getElementById("area1"); 
+           
+           input1.value = "";
+           input2.value = "";
+           areaOfRec.innerText = "";
+         }
+        </script>
+       </body>
+      </html>
+</head>
+<body>
+    
+</body>
+</html>
